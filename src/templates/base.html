@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=Geist:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ get_url(path='styles.css') }}">
+</head>
+
+<body>
+    <main class="container">
+        {% block content %}{% endblock content %}
+    </main>
+</body>
+
+</html>
