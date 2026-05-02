@@ -1,0 +1,28 @@
+---
+import { getLangFromUrl } from '../i18n/utils';
+// Provides language picker component
+import LanguagePicker from '../components/LanguagePicker.astro';
+// Supports weights 200-900
+import '@fontsource-variable/sn-pro/wght.css';
+// Supports weights 400-800
+import '@fontsource-variable/eb-garamond/wght.css';
+const lang = getLangFromUrl(Astro.url);
+---
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="/styles/primary.css" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body>
+	    <header>
+			<LanguagePicker />
+		</header>
+		<main class="container">
+		    <slot />
+		</main>
+	</body>
+</html>
