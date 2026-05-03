@@ -26,7 +26,7 @@ body {
     background-color: var(--bg);
     color: var(--text);
     font-family: 'SN Pro Variable', system-ui, -apple-system, sans-serif;
-    margin: auto;
+    margin: 0 auto;
 }
 
 /* Layout */
@@ -159,7 +159,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
 
 /* Body text */
