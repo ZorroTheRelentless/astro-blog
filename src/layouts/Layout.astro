@@ -1,11 +1,12 @@
 ---
 import { getLangFromUrl } from '../i18n/utils';
+import { ui } from '../i18n/ui';
 import LanguagePicker from '../components/LanguagePicker.astro';
+const lang = getLangFromUrl(Astro.url);
+const t = ui[lang];
 
 import '@fontsource-variable/sn-pro/wght.css';
 import '@fontsource-variable/eb-garamond/wght.css';
-
-const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
@@ -31,30 +32,16 @@ const lang = getLangFromUrl(Astro.url);
               href={`/${lang}/`}
               class={Astro.url.pathname === `/${lang}/` ? "active" : ""}
             >
-              About Me
+              {t.nav.home}
             </a>
           </li>
-
           <li>
-            <a
-              href={`/${lang}/blog`}
-              class={Astro.url.pathname.startsWith(`/${lang}/blog`) ? "active" : ""}
-            >
-              Blog
-            </a>
-          </li>
-
-          <li>
-            <a
-              href={`/${lang}/about`}
-              class={Astro.url.pathname.startsWith(`/${lang}/about`) ? "active" : ""}
-            >
-              About
+            <a href={`/cv/cv-${lang}.pdf`} target="_blank">
+              {t.nav.cv}
             </a>
           </li>
         </ul>
       </nav>
-
       <LanguagePicker />
     </header>
 

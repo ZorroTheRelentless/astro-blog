@@ -1,12 +1,23 @@
 ---
 import { languages } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+
+const currentLang = getLangFromUrl(Astro.url);
+
+// remove the current language prefix from the path
+const pathname = Astro.url.pathname.replace(`/${currentLang}`, "") || "/";
 ---
 
 <nav class="language-switcher">
   <ul>
     {Object.entries(languages).map(([lang, label]) => (
       <li>
-        <a href={`/${lang}/`}>{label}</a>
+        <a
+          href={`/${lang}${pathname}`}
+          class={lang === currentLang ? "active" : ""}
+        >
+          {label}
+        </a>
       </li>
     ))}
   </ul>

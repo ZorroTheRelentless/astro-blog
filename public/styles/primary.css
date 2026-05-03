@@ -18,7 +18,7 @@
     --link: light-dark(#2b2b2b, #f0eaea);
 
     /* Hover accent color  */
-    --accent: light-dark(#7a5af8, #9b87f5);
+    --accent: light-dark(#a7d8d7, #6BA3A1);
 }
 
 /* Base */
@@ -45,19 +45,35 @@ body {
     margin: 0 auto;
     padding: 1.5rem 1rem;
     gap: 2rem;
+    align-items: baseline;
 }
 
+/* ---- Define Current Logo - Consider refining later as SVG ---- */
 .logo a {
     font-family: 'EB Garamond Variable', serif;
     letter-spacing: -0.17em;
     font-size: 4rem;
-    /* or 1.1rem if you want stronger presence */
+    line-height: 1;
     font-weight: 600;
-    color: var(--text-main);
+    color: var(--text);
     text-decoration: none;
 }
 
-/* ===== NAV BASE ===== */
+.logo a:hover {
+    color: var(--accent)
+}
+
+
+
+/* ---- center nav and language switcher to midline of logo ---- */
+.nav a,
+.language-switcher a {
+    display: inline-block;
+    transform: translateY(-0.75rem);
+
+}
+
+/* ---- Nav and Language Switcher Base Styles ---- */
 
 .nav,
 .language-switcher {
@@ -80,48 +96,47 @@ body {
     gap: 0.75rem;
 }
 
-/* ===== LINK STYLE ===== */
-
+/* base link */
 .nav a,
 .language-switcher a {
     position: relative;
-    display: inline-block;
     color: var(--text-muted);
     text-decoration: none;
-    padding: 0.1rem 0.1rem 0.08rem;
     transition: color 160ms ease;
 }
 
-/* ===== UNDERLINE ANIMATION ===== */
-
+/* ONLY active + hover get underline */
 .nav a::after,
 .language-switcher a::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -2px;
-    /* slightly below text = cleaner look */
     height: 2px;
     width: 0;
-    border-radius: 999px;
     background: currentColor;
+    border-radius: 999px;
     transition: width 180ms ease;
 }
 
-/* ===== INTERACTION STATES ===== */
+/* hover */
+.nav a:hover::after,
+.language-switcher a:hover::after {
+    width: 100%;
+}
 
+/* active stays underlined */
+.nav a.active::after,
+.language-switcher a.active::after {
+    width: 100%;
+}
+
+/* color change only on interaction/active */
 .nav a:hover,
 .nav a.active,
 .language-switcher a:hover,
 .language-switcher a.active {
     color: var(--text-main);
-}
-
-.nav a:hover::after,
-.nav a.active::after,
-.language-switcher a:hover::after,
-.language-switcher a.active::after {
-    width: 100%;
 }
 
 /* Headings */
@@ -156,13 +171,13 @@ li {
 }
 
 /* Links */
-a {
+main a {
     color: var(--link);
     text-decoration: none;
     border-bottom: 1px solid var(--border);
 }
 
-a:hover {
+main a:hover {
     border-bottom: 1px solid var(--link);
 }
 
