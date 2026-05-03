@@ -1,11 +1,30 @@
 :root {
     color-scheme: light dark;
+
+    /* Base */
+    --bg: light-dark(#ede8e8, #1f1f1f);
+    --text: light-dark(#2b2b2b, #e6e1e1);
+
+    /* Headings (slightly softer than pure text) */
+    --heading: light-dark(#444444, #f2eeee);
+
+    /* Subtle surfaces (buttons, nav, etc.) */
+    --surface: light-dark(#e2dddd, #2a2a2a);
+
+    /* Borders / separators */
+    --border: light-dark(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
+
+    /* Link */
+    --link: light-dark(#2b2b2b, #f0eaea);
+
+    /* Hover accent color  */
+    --accent: light-dark(#7a5af8, #9b87f5);
 }
 
 /* Base */
 body {
-    background-color: light-dark(#ede8e8, #2b2b2b);
-    color: light-dark(#2b2b2b, #ede8e8);
+    background-color: var(--bg);
+    color: var(--text);
     font-family: 'SN Pro Variable', system-ui, -apple-system, sans-serif;
     margin: auto;
 }
@@ -17,13 +36,100 @@ body {
     padding: 1rem;
 }
 
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+}
+
+.logo a {
+    font-family: 'EB Garamond Variable', serif;
+    letter-spacing: -0.17em;
+    font-size: 4rem;
+    /* or 1.1rem if you want stronger presence */
+    font-weight: 600;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+/* ===== NAV BASE ===== */
+
+.nav,
+.language-switcher {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Shared list layout */
+.nav ul,
+.language-switcher ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+/* Slightly tighter spacing for language switcher */
+.language-switcher ul {
+    gap: 0.75rem;
+}
+
+/* ===== LINK STYLE ===== */
+
+.nav a,
+.language-switcher a {
+    position: relative;
+    display: inline-block;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.1rem 0.1rem 0.08rem;
+    transition: color 160ms ease;
+}
+
+/* ===== UNDERLINE ANIMATION ===== */
+
+.nav a::after,
+.language-switcher a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* slightly below text = cleaner look */
+    height: 2px;
+    width: 0;
+    border-radius: 999px;
+    background: currentColor;
+    transition: width 180ms ease;
+}
+
+/* ===== INTERACTION STATES ===== */
+
+.nav a:hover,
+.nav a.active,
+.language-switcher a:hover,
+.language-switcher a.active {
+    color: var(--text-main);
+}
+
+.nav a:hover::after,
+.nav a.active::after,
+.language-switcher a:hover::after,
+.language-switcher a.active::after {
+    width: 100%;
+}
+
 /* Headings */
 h1,
 h2,
-h3,
-h4 {
+h3 {
     font-family: 'EB Garamond Variable', serif;
-    color: light-dark(#444444, #ede8e8);
+    color: var(--heading);
     font-weight: 600;
     letter-spacing: -0.047em;
     margin-bottom: -0.5rem;
@@ -51,13 +157,13 @@ li {
 
 /* Links */
 a {
-    color: #2b2b2b;
+    color: var(--link);
     text-decoration: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--border);
 }
 
 a:hover {
-    border-bottom: 1px solid #2b2b2b;
+    border-bottom: 1px solid var(--link);
 }
 
 strong {

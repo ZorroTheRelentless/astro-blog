@@ -1,28 +1,65 @@
 ---
 import { getLangFromUrl } from '../i18n/utils';
-// Provides language picker component
 import LanguagePicker from '../components/LanguagePicker.astro';
-// Supports weights 200-900
+
 import '@fontsource-variable/sn-pro/wght.css';
-// Supports weights 400-800
 import '@fontsource-variable/eb-garamond/wght.css';
+
 const lang = getLangFromUrl(Astro.url);
 ---
+
 <!doctype html>
 <html lang={lang}>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="stylesheet" href="/styles/primary.css" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-	    <header>
-			<LanguagePicker />
-		</header>
-		<main class="container">
-		    <slot />
-		</main>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/styles/primary.css" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Zoravar SK</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <a href={`/${lang}/`}>ZK</a>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li>
+            <a
+              href={`/${lang}/`}
+              class={Astro.url.pathname === `/${lang}/` ? "active" : ""}
+            >
+              About Me
+            </a>
+          </li>
+
+          <li>
+            <a
+              href={`/${lang}/blog`}
+              class={Astro.url.pathname.startsWith(`/${lang}/blog`) ? "active" : ""}
+            >
+              Blog
+            </a>
+          </li>
+
+          <li>
+            <a
+              href={`/${lang}/about`}
+              class={Astro.url.pathname.startsWith(`/${lang}/about`) ? "active" : ""}
+            >
+              About
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <LanguagePicker />
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+  </body>
 </html>
