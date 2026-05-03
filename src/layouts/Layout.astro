@@ -48,5 +48,17 @@ import '@fontsource-variable/eb-garamond/wght.css';
     <main class="container">
       <slot />
     </main>
+    <footer>
+      <p> &copy Zoravar Singh Kalkat {new Date().getFullYear()} ·
+        {t.footer.before}{" "}
+        <a
+          href="https://github.com/zorrotheimpaler/astro-blog"
+          target="_blank"
+        >
+          {t.footer.link}
+        </a>{" "}
+        {t.footer.after}
+      </p>
+    </footer>
   </body>
 </html>

@@ -38,7 +38,6 @@ body {
 
 .site-header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 
     max-width: 70rem;
@@ -63,14 +62,19 @@ body {
     color: var(--accent)
 }
 
-
+/* Body text */
+.nav p,
+.language-switcher p,
+.nav li,
+.language-switcher li {
+    line-height: 1.27;
+    font-size: 1.57rem;
+}
 
 /* ---- center nav and language switcher to midline of logo ---- */
 .nav a,
 .language-switcher a {
     display: inline-block;
-    transform: translateY(-0.75rem);
-
 }
 
 /* ---- Nav and Language Switcher Base Styles ---- */
@@ -79,6 +83,7 @@ body {
 .language-switcher {
     font-size: 0.75rem;
     font-weight: 700;
+    transform: translateY(-0.75rem);
 }
 
 /* Shared list layout */
@@ -163,8 +168,8 @@ h3 {
 }
 
 /* Body text */
-p,
-li {
+main p,
+main li {
     line-height: 1.27;
     font-size: 1.87rem;
     margin-bottom: 3rem;
@@ -183,4 +188,20 @@ main a:hover {
 
 strong {
     font-weight: 700;
+}
+
+footer {
+    padding: 2rem 0;
+}
+
+footer a {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+}
+
+footer p {
+    text-align: center;
+    color: var(--text);
+    font-size: 1.3rem;
 }
