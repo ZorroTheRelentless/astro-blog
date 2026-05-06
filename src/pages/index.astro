@@ -1,0 +1,24 @@
+---
+import  Layout from '../pages/en/index.mdx';
+---
+
+<Layout>
+    <script>
+        // NOTE: keep langauge in sync with i18n/ui.ts.
+        let redirect = "en";
+        const supported = ["en", "de"];
+
+        if (Array.isArray(navigator.languages)) {
+            for (const lang of navigator.languages) {
+              const base = lang.split("-")[0];
+
+              if (supported.includes(base)) {
+                redirect = base;
+                break;
+              }
+            }
+        }
+
+        window.location.href = `/${redirect}`;
+    </script>
+</Layout>
