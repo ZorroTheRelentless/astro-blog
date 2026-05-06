@@ -1,10 +1,11 @@
 { pkgs }:
-pkgs.stdenv.mkDerivation {
+pkgs.buildNpmPackage {
   name = "blog";
-  src = ../src;
-  buildInputs = [ pkgs.deno pkgs.nodejs ];
+  src = ../.;
+  npmDepsHash = "sha256-7Vplo6JFKQR5iTLzRsAm5LC3TCiQOcScj3nJIEikJlg=";
   buildPhase = ''
-    zola build
-    cp -r public $out
+    npm run build
+    mkdir -p $out
+    cp -r dist/* $out
   '';
 }

@@ -4,7 +4,6 @@
     "npm:@astrojs/mdx@^5.0.4": "5.0.4_astro@6.2.1",
     "npm:@fontsource-variable/eb-garamond@^5.2.7": "5.2.7",
     "npm:@fontsource-variable/sn-pro@^5.2.1": "5.2.1",
-    "npm:@fontsource/apfel-grotezk@^5.2.5": "5.2.5",
     "npm:astro@^6.2.1": "6.2.1"
   },
   "npm": {
@@ -262,9 +261,6 @@
     },
     "@fontsource-variable/sn-pro@5.2.1": {
       "integrity": "sha512-0p0lgvL/guaZIsr4/BKBzg7t4PKJreMRxC24acnGLqiQq8wm3bCalJYyU8mBlzyf8RWKmdjYoRoNuL+0IcVD2A=="
-    },
-    "@fontsource/apfel-grotezk@5.2.5": {
-      "integrity": "sha512-fmLCeQ9TooC+FHpdabW3n2C+Hz6oIdGGkjDFvhE+tqWBEAsaXOBlT5EZUK9CpdR/20jM9hy43Agp8d+N2nhxxw=="
     },
     "@img/colour@1.1.0": {
       "integrity": "sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ=="
@@ -2544,7 +2540,6 @@
         "npm:@astrojs/mdx@^5.0.4",
         "npm:@fontsource-variable/eb-garamond@^5.2.7",
         "npm:@fontsource-variable/sn-pro@^5.2.1",
-        "npm:@fontsource/apfel-grotezk@^5.2.5",
         "npm:astro@^6.2.1"
       ]
     }
