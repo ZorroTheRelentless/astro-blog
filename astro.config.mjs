@@ -1,8 +1,25 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
 import mdx from '@astrojs/mdx';
+import { visit } from "unist-util-visit";
 
+function externalLinks() {
+  return (tree) => {
+    visit(tree, "element", (node) => {
+      if (node.tagName !== "a") return;
+
+      const href = node.properties?.href;
+      if (typeof href !== "string") return;
+
+      const isExternal = /^https?:\/\//.test(href);
+
+      if (!isExternal) return;
+
+      node.properties.target = "_blank";
+      node.properties.rel = "noopener noreferrer";
+    });
+  };
+}
 // https://astro.build/config
 export default defineConfig({
   integrations: [mdx()],
@@ -15,5 +32,8 @@ export default defineConfig({
       redirectToDefaultLocale: true,
     },
   },
-  prefetch: true
+  prefetch: true,
+  markdown: {
+    rehypePlugins: [externalLinks],
+  },
 });
