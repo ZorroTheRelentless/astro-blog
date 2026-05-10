@@ -1,5 +1,5 @@
 {
-  description = "A flake for my Zola powered blog";
+  description = "A flake for my Astro powered blog";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
