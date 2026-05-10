@@ -12,6 +12,8 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # My personal dependencies
+    cv.url = "github:zorrotherelentless/cv";
   };
 
   outputs =
