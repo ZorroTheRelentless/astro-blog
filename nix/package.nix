@@ -1,4 +1,7 @@
-{ pkgs, perSystem }:
+{
+  pkgs,
+  perSystem,
+}:
 let
   docs-package = pkgs.buildNpmPackage {
     name = "blog-package";
@@ -11,8 +14,9 @@ let
       mkdir -p $out
       cp -r dist/* $out
     '';
-};
-in pkgs.stdenv.mkDerivation {
+  };
+in
+pkgs.stdenv.mkDerivation {
   name = "blog";
   src = ../.;
   buildPhase = ''

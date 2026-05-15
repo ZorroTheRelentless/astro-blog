@@ -38,8 +38,7 @@ let
       taplo.enable = true;
 
       # Spell-checking source code
-      typos.enable = true;
-      autocorrect.enable = true;
+      # typos.enable = true;
 
       # Source-agnostic lexicographic sorting
       keep-sorted.enable = true;

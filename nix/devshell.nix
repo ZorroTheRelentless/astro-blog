@@ -1,16 +1,6 @@
-
-{
-  pkgs,
-  inputs,
-  ...
-}:
-let
-  src = ../.;
-in
+{ pkgs, ... }:
 pkgs.mkShell {
-  packages =
-    with pkgs;
-    [
-        nodejs
-    ];
+  packages = with pkgs; [
+    nodejs
+  ];
 }

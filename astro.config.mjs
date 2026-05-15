@@ -1,6 +1,6 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
 import { visit } from "unist-util-visit";
 
 function externalLinks() {
