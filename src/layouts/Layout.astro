@@ -2,8 +2,10 @@
 import { getLangFromUrl } from '../i18n/utils';
 import { ui } from '../i18n/ui';
 import LanguagePicker from '../components/LanguagePicker.astro';
+import SEO from "../components/SEO.astro";
 const lang = getLangFromUrl(Astro.url);
 const t = ui[lang];
+const { frontmatter } = Astro.props;
 
 import '@fontsource-variable/sn-pro/wght.css';
 import '@fontsource-variable/eb-garamond/wght.css';
@@ -16,6 +18,11 @@ import '@fontsource-variable/eb-garamond/wght.css';
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="/styles/primary.css" />
     <meta name="generator" content={Astro.generator} />
+    <SEO
+            title={frontmatter.title}
+            description={frontmatter.description}
+            lang={frontmatter.lang}
+        />
     <title>Zoravar SK</title>
   </head>
 

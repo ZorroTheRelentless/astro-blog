@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import { visit } from "unist-util-visit";
+import sitemap from "@astrojs/sitemap";
 
 function externalLinks() {
   return (tree) => {
@@ -22,6 +23,9 @@ function externalLinks() {
 }
 // https://astro.build/config
 export default defineConfig({
+  site: "https://zoravar.eu",
+  site: "https://yourdomain.com",
+  integrations: [sitemap()],
   integrations: [mdx()],
   i18n: {
     locales: ["en", "de"],
