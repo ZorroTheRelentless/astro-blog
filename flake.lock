@@ -50,11 +50,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1778861622,
-        "narHash": "sha256-AzhbLCpRCFxs8noqlEtJlrHV89vPtw0EMF3E0UB+fZE=",
+        "lastModified": 1782742049,
+        "narHash": "sha256-YC2mhe5R0LfIWOrqoxqWcWAZ9jFgB2jqbRRspO7NKJI=",
         "owner": "zorrotherelentless",
         "repo": "cv",
-        "rev": "53e892e59cc97170c760e054ba14000fbe2dfe4e",
+        "rev": "822cf9f75e80bc20a307646e4ff9fcfc5f4331b4",
         "type": "github"
       },
       "original": {
