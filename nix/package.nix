@@ -6,7 +6,7 @@ let
   docs-package = pkgs.buildNpmPackage {
     name = "blog-package";
     src = ../.;
-    npmDepsHash = "sha256-CvzxrMa+VeON4k/T1cM9w6FMZhN+g6BZOlEcyQDo3/4=";
+    npmDepsHash = "sha256-53OkvFUfKwDp5kXVE8koVTg5QAkgUpKgJjjRC+1Yp+w=";
     buildPhase = ''
       mkdir -p public/cv
       cp -r ${perSystem.cv.default}/* public/cv
