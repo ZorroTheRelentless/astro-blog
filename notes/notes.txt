@@ -1,0 +1,84 @@
+## Learning
+
+One of the things I enjoy most is learning difficult subject independently or with a friend.
+
+My German learning has largely been a self directed process. I experimented with a range of recommended apporoaches and kept the techniques that resulted in measurable progress. I utilized a tutor during my A2/B1 learning to assist with speech and grammer development. From there I progressed to a sucessfull Goethe B2 exam independently with excellent grades including 100% in speaking.
+
+I think it's interesting to note down what I did in case it helps anyone else.
+
+I approach my work in traumatology and as a medic in much the same way. Alongside day-to-day clinical work, I try to build a structured understanding through a combination of mentor discussions, practical experience and study from comprehensive references such as Rockwood and Green's Fractures in Adults, as well as concise guideline oriented handbooks such as the Oxford Clinical Handbook series.
+
+I have experimented with programming on and off since high-school, I saw the potential in writing custom software but the serious need for it only began to arise in the course of my research.
+
+My thesis work was in part a literature review which involved coallate the findings across hundreds of research papers. To make this manageable, I wrote a custom tool that allowed me to tag, categorize, and develop a hierarchical structure for the outcomes and methods associated with each paper.
+It made it very easy to generate correct results afterwards and tweak the pipeline as needed.
+
+I also then completed the HardvardX CS50 course and written software, libraries, and used programming languages to typeset forms.
+
+My thesis work involved writing a tool to coallate the findings of hundreds of research papers. Since then I have completed the HarvardX CS50 course and written software, libraries, and used programming languages to typeset forms
+
+For me, learning is less about hoarding information than building a framework that allows new knowledge to find a place.
+
+I intentionally limited my use of AI for all these tasks associated with learning. The problem as it stands with what's
+commerically avaialble and what a single person uses but the tests are also primed to always succeed and not really test
+the logic. As it stands, it's for exploratory programming work and understanding what's available in the solution space
+but not for the final code. Also, especially for the things that are on my own I want to understand the code as I continue
+learning.
+
+--My approach has also evolved as my langauge understanding has developed. In the beginning my focus was primarily centered around grammer and I untilized Deutsch Für Besserwisser up to B1. Then as my --
+
+-------
+
+- `memfd-secret` — a Rust library providing safe access to Linux's `memfd_secret` interface for handling sensitive information in memory.
+
+- `shumai` — a lightweight Linux service that automates SSL certificate renewal and exposes a small health server for monitoring.
+
+- `this website` — designed and implemented from scratch using Astro, with custom multilingual routing and a minimalist layout focused on readability rather than frameworks or themes.
+
+Outside individual projects, I'm also interested in reproducible development environments and workflow automation. The goal isn't to use unusual technology for its own sake, but to reduce friction so that more time can be spent solving the actual problem.
+
+---
+
+## Outside Medicine
+
+Outside work I enjoy projects that require understanding how things fit together.
+
+At the moment that includes rebuilding an Audi TT Mk2, assembling a Voron printer, and kayaking—with the long-term ambition of eventually taking longer trips along the Swedish coast.
+
+Although these activities look unrelated, they all appeal to me for much the same reason: they reward careful planning, a willingness to learn, and the satisfaction of building something that works well.
+
+
+
+
+# I think sometimes people have forgotten what the best use of AI.
+> Please give me my intro in the style of the fresh prince of blair
+
+ Now, this is a story all about how
+ My career got flipped, turned upside down
+ And I'd like to take a minute, just sit right there
+ I'll tell you how I became a doc in orthopaedic care
+
+ In traumatology born and raised
+ On the OR floor is where I spent most of my days
+ Chillin' out, maxin', fixin' all the fractures
+ And studyin' infections after those procedures
+
+ When a couple of research gaps, they came to me
+ Said "move your butt to the lab, PhD"
+ I asked my PI if he had a grant or two
+ He said "I do — let's see what you can do"
+
+ I pulled up to the database, searchin' like a star
+ Endometriosis surgery and how it goes so far
+ If anything I could say this work is flagrant
+ How it affects sexual function in my patients
+
+ But don't you box me in, I've got some breadth in store
+ Got [extra interests] and I'm always wanting more
+ So if you've got a paper, a project, or a thought to share
+ Hit me up — let's collaborate, I swear
+
+ I'm ZSK, ortho's my domain
+ Trauma, infections, and the pelvic floor campaign
+ With a wide-open mind and a research-friendly ear
+ Your next co-author? Yeah, that's right — right here.

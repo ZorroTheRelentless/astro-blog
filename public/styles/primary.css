@@ -191,7 +191,7 @@ main li {
 }
 
 main p {
-  margin-bottom: 2.7rem;
+  margin-bottom: 1.2rem;
 }
 
 main hr {
@@ -202,7 +202,7 @@ main hr {
 /* Links */
 main a {
   color: var(--link);
-  text-decoration: none;
+  text-decoration: underline;
   border-bottom: 1px solid var(--border);
 }
 

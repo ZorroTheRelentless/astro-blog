@@ -15,7 +15,7 @@ export const ui = {
     footer: {
       before: "Source code available on",
       link: "GitHub",
-      after: ".",
+      after: "",
     },
   },
   de: {
